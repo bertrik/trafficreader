@@ -1,0 +1,32 @@
+plugins {
+  id 'com.github.ben-manes.versions' version '0.45.0'
+  id "nl.littlerobots.version-catalog-update" version "0.8.1"
+}
+
+version = '0.1'
+
+allprojects { group = 'nl.sikken.bertrik' }
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: "eclipse"
+    apply plugin: 'com.github.ben-manes.versions'
+
+    java {
+        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_11
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    // Standard libraries added to all projects
+    dependencies {
+        testImplementation libs.junit
+	    testImplementation libs.mockito.core
+
+        implementation libs.slf4j.api
+    }
+
+}

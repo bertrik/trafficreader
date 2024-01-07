@@ -1,0 +1,20 @@
+apply plugin: "application"
+
+application {
+    mainClass = 'nl.bertriksikken.TrafficReader'
+}
+
+dependencies {
+    implementation libs.slf4j.reload4j
+    
+    implementation libs.paho.client.mqttv3
+    implementation libs.jackson.databind
+    implementation libs.jaxb.api
+    implementation libs.retrofit
+    implementation libs.jackson.format.xml
+
+
+    compileOnly libs.spotbugs.annotations
+    testImplementation libs.retrofit.mock
+}
+

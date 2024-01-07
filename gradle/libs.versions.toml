@@ -1,0 +1,34 @@
+[versions]
+spotbugs = "4.8.3"
+retrofit2 = "2.9.0"
+slf4j2 = "2.0.9"
+jackson = "2.16.1"
+
+[libraries]
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-format-xml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-xml", version.ref = "jackson" }
+
+spotbugs = { module = "com.github.spotbugs:spotbugs", version.ref = "spotbugs" }
+spotbugs-annotations = { module = "com.github.spotbugs:spotbugs-annotations", version.ref = "spotbugs" }
+
+retrofit-converter-jackson = { module = "com.squareup.retrofit2:converter-jackson", version.ref = "retrofit2" }
+retrofit-converter-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "retrofit2" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit2" }
+retrofit-mock = { module = "com.squareup.retrofit2:retrofit-mock", version.ref = "retrofit2" }
+
+jaxb-api = "javax.xml.bind:jaxb-api:2.3.0"
+junit = "junit:junit:4.13.2"
+
+log4j-core = "org.apache.logging.log4j:log4j-core:2.17.1"
+paho-client-mqttv3 = "org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5"
+mockito-core = "org.mockito:mockito-core:5.8.0"
+
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j2" }
+slf4j-reload4j = { module = "org.slf4j:slf4j-reload4j", version.ref = "slf4j2" }
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j2" }
+
+[plugins]
+versions = "com.github.ben-manes.versions:0.50.0"
+spotbugs = "com.github.spotbugs:5.0.13"
+version-catalog-update = "nl.littlerobots.version-catalog-update:0.8.3"
+
